@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-10-21T20:07:23 IST" name="Default suite" finished-at="2026-10-21T20:07:27 IST" duration-ms="4057">
+  <suite started-at="2026-10-22T20:27:29 IST" name="Default suite" finished-at="2026-10-22T20:27:32 IST" duration-ms="3445">
     <groups>
     </groups>
-    <test started-at="2026-10-21T20:07:23 IST" name="Default test" finished-at="2026-10-21T20:07:27 IST" duration-ms="4057">
-      <class name="ResponseValidationsUsingAssertions.ValidateRespBody_JsonpathToolTest">
-        <test-method signature="validateRespBody()[pri:0, instance:ResponseValidationsUsingAssertions.ValidateRespBody_JsonpathToolTest@c8c12ac]" started-at="2026-10-21T20:07:23 IST" name="validateRespBody" finished-at="2026-10-21T20:07:27 IST" duration-ms="4006" status="PASS">
+    <test started-at="2026-10-22T20:27:29 IST" name="Default test" finished-at="2026-10-22T20:27:32 IST" duration-ms="3445">
+      <class name="ResponseValidationsUsingAssertions.ValidateUsingComplexJSON_Xpath">
+        <test-method signature="verifyDataTest()[pri:0, instance:ResponseValidationsUsingAssertions.ValidateUsingComplexJSON_Xpath@67c27493]" started-at="2026-10-22T20:27:29 IST" name="verifyDataTest" finished-at="2026-10-22T20:27:32 IST" duration-ms="3390" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateRespBody -->
-      </class> <!-- ResponseValidationsUsingAssertions.ValidateRespBody_JsonpathToolTest -->
+        </test-method> <!-- verifyDataTest -->
+      </class> <!-- ResponseValidationsUsingAssertions.ValidateUsingComplexJSON_Xpath -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

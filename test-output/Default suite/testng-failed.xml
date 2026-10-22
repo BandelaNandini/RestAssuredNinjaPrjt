@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ResponseValidationsUsingAssertions.ValidateRespBody_JsonpathToolTest">
+      <class name="ResponseValidationsUsingAssertions.VerifyDataUsingComplexJSON_Xpath">
         <methods>
-          <include name="validateRespBody"/>
+          <include name="verifyDataTest"/>
         </methods>
-      </class> <!-- ResponseValidationsUsingAssertions.ValidateRespBody_JsonpathToolTest -->
+      </class> <!-- ResponseValidationsUsingAssertions.VerifyDataUsingComplexJSON_Xpath -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

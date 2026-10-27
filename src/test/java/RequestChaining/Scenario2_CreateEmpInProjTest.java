@@ -33,15 +33,16 @@ public class Scenario2_CreateEmpInProjTest {
 		String projectName = resp.jsonPath().get("projectName");
 		System.out.println(projectName);
 
-		// API 02 --> Add an employee to the project
-//	empPojo(String designation, String dob, String email, String empName, int experience, String mobileNo,
-//				String project, String role, String username) 
+		// API 02 --> Add an employee to the project [get the format from empapi's
+		// endpoits execution]
+//	empPojo(String designation, String dob[check the format in schema], String email, String empName, double experience, String mobileNo,
+//				String project, String role[DD - get from schema], String username) 
 
 		EmployeePojoUtility employeepojo = new EmployeePojoUtility("Testeng", "24/04/1989", "tom@gmail.com",
 				"tom_" + rnum, 4, "9876543210", projectName, "ROLE_EMPLOYEE", "tom_" + rnum);
-		
-		
 
+		given().contentType(ContentType.JSON).body(employeepojo).when().post("http://49.249.29.6:8084/employees").then().log().all();
+//				.assertThat().statusCode(201).log().all();
 	}
 
 }

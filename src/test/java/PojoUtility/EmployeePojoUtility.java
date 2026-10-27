@@ -6,13 +6,13 @@ public class EmployeePojoUtility {
 	public String dob;
 	public String email;
 	public String empName;
-	public int experience;
+	public double experience;
 	public String mobileNo;
 	public String project;
 	public String role;
 	public String username;
 
-	public EmployeePojoUtility(String designation, String dob, String email, String empName, int experience,
+	public EmployeePojoUtility(String designation, String dob, String email, String empName, double experience,
 			String mobileNo, String project, String role, String username) {
 		super();
 		this.designation = designation;
@@ -58,7 +58,7 @@ public class EmployeePojoUtility {
 		this.empName = empName;
 	}
 
-	public int getExperience() {
+	public double getExperience() {
 		return experience;
 	}
 

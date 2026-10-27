@@ -29,10 +29,12 @@ public class Scenario1_DeleteProjTest {
 				.log().all();
 
 		// Capture projectid[Using id only we can delete the proj] from the response
+		// If we have complex path we go for jsonpath from jayway package but now it is
+		// not necessary we go for jsonpath() from RA
 		String projectId = resp.jsonPath().get("projectId");
 		System.out.println(projectId);
 
-		// API 02 --> Delete the project
+		// API 02 --> Delete the project [within same ts executing another request]
 		given().delete("http://49.249.29.6:8084/projects/" + projectId).then().log().all();
 	}
 

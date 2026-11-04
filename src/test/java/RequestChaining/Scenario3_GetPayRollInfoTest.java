@@ -39,7 +39,7 @@ public class Scenario3_GetPayRollInfoTest {
 				// Here Post will return 200 [as it used for creation usually it return 201]
 //		.when().get("http://49.249.29.6:8084/login").then().log().all();
 
-				.when().post("http://49.249.29.6:8084/auth/realms/ninza/protocol/openid-connect/token");
+				.when().get("http://49.249.29.6:8084/auth/realms/ninza/protocol/openid-connect/token");
 		resp.then().log().all();
 
 		// Capture the token from the reponse

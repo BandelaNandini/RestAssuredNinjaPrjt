@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="RequestChaining.Scenario3_GetPayRollInfoTest">
+      <class name="RequestChaining.Scenario4_BearerTokenUsingSS">
         <methods>
-          <include name="payroll_ReqChainingTest"/>
+          <include name="login_ReqChainingTest"/>
         </methods>
-      </class> <!-- RequestChaining.Scenario3_GetPayRollInfoTest -->
+      </class> <!-- RequestChaining.Scenario4_BearerTokenUsingSS -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

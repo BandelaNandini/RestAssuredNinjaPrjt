@@ -4,6 +4,7 @@ import static io.restassured.RestAssured.given;
 
 import java.util.List;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.jayway.jsonpath.JsonPath;
@@ -28,9 +29,14 @@ public class ValidateUsingComplexJSON_Xpath {
 		// Capture data using some condition like print prjtid if projName is this
 		List<String> listprojid = JsonPath.read(resp.asString(),
 				"content[*].[?(@.projectName=='Organization1')].projectId");
-		System.out.println(listprojid.get(0));
 		
-		for(String s:listprojid) {
+		String actorjtid=listprojid.get(0);
+		System.out.println(actorjtid);
+		
+		//TestNg Assertion
+		Assert.assertEquals(actorjtid, "TY_PROJ_1240");
+
+		for (String s : listprojid) {
 			System.out.println(s);
 		}
 	}

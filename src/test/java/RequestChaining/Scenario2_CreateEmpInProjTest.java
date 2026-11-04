@@ -17,6 +17,9 @@ public class Scenario2_CreateEmpInProjTest {
 	@Test
 	public void createEmp_ReqChainingTest() {
 
+//		Response response=given().when()
+//		.get("http://49.249.29.6:8084/login");
+//		response.then().log().all();
 		// Generate random number
 		Random random = new Random();
 		int rnum = random.nextInt(1000);
@@ -41,7 +44,7 @@ public class Scenario2_CreateEmpInProjTest {
 		EmployeePojoUtility employeepojo = new EmployeePojoUtility("Testeng", "24/04/1989", "tom@gmail.com",
 				"tom_" + rnum, 4, "9876543210", projectName, "ROLE_EMPLOYEE", "tom_" + rnum);
 
-		given().contentType(ContentType.JSON).body(employeepojo).when().post("http://49.249.29.6:8084/employees").then().log().all();
+		given().auth().oauth2("eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybWd5YW50cmEiLCJleHAiOjE3OTM2NjE4OTksImlhdCI6MTc5MzYyNTg5OX0.kQDqbKJ_N1RGOUCEOS1G_XXjwguNNaNDfsrooZuOvHg").contentType(ContentType.JSON).body(employeepojo).when().post("http://49.249.29.6:8084/employees").then().log().all();
 //				.assertThat().statusCode(201).log().all();
 	}
 

@@ -23,7 +23,6 @@ public class Scenario4_BearerTokenUsingSS {
 		Random random = new Random();
 		int rnum = random.nextInt(1000);
 
-
 		SS_UserPojoUtility spojo = new SS_UserPojoUtility("Hyderabad", "India", "tom" + rnum + "@gmail.com", "tom",
 				"FEMALE", "sam", "tom@123", 9876543213l, "Telangana", "ALPHA");
 
@@ -36,11 +35,19 @@ public class Scenario4_BearerTokenUsingSS {
 		String userid = resp.jsonPath().getString("data.userId");
 		System.out.println(userid);
 
-		SS_LoginPojoUtility slpojo = new SS_LoginPojoUtility("tom"+rnum+".gmail.com", "tom@123", "ADMIN");
+		SS_LoginPojoUtility slpojo = new SS_LoginPojoUtility("tom" + rnum + "@gmail.com", "tom@123", "SHOPPER");
 
 		Response Lresp = given().relaxedHTTPSValidation().contentType(ContentType.JSON).body(slpojo).when()
 				.post("https://www.shoppersstack.com/shopping/users/login");
 		Lresp.then().log().all();
+
+		String token = Lresp.jsonPath().getString("data.jwtToken");
+		System.out.println("Token : " + token);
+
+		// Queryparameter
+		given().relaxedHTTPSValidation().auth().oauth2(token).queryParam("zoneId", "ALPHA").when()
+				.get("https://www.shoppersstack.com/shopping/cards/"+userid+"").then().log().all();
+
 	}
 
 }

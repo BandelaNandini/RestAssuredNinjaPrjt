@@ -44,9 +44,13 @@ public class Scenario4_BearerTokenUsingSS {
 		String token = Lresp.jsonPath().getString("data.jwtToken");
 		System.out.println("Token : " + token);
 
+		System.out.println("https://www.shoppersstack.com/shopping/products/"+userid+"");
+		
 		// Queryparameter
-		given().relaxedHTTPSValidation().auth().oauth2(token).queryParam("zoneId", "ALPHA").when()
-				.get("https://www.shoppersstack.com/shopping/cards/"+userid+"").then().log().all();
+		given().relaxedHTTPSValidation().auth().oauth2(token)
+		.queryParam("zoneId", "ALPHA")
+		.when().get("https://www.shoppersstack.com/shopping/cards/"+userid+"")
+		.then().log().all();
 
 	}
 

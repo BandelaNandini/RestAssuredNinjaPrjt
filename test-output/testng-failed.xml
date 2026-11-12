@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="RequestChaining.Scenario4_BearerTokenUsingSS">
+      <class name="AuthenticationAndAuthorizationTest.BasicAuthTest">
         <methods>
-          <include name="login_ReqChainingTest"/>
+          <include name="sampleBATest"/>
         </methods>
-      </class> <!-- RequestChaining.Scenario4_BearerTokenUsingSS -->
+      </class> <!-- AuthenticationAndAuthorizationTest.BasicAuthTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
